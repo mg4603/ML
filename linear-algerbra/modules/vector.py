@@ -39,6 +39,8 @@ class Vector:
     def summation(self, vector):
         return sum(vector)
 
+    def vector_mean(self):
+        return self.summation(self.__mul__(1/ len(self.vals)))
 
 a = Vector([1, 2, 3, 4])
 b = Vector([1, 2, 3, 4])
