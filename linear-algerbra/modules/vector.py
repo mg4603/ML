@@ -6,4 +6,8 @@ class Vector:
         if new_val:
             self.vals.append(new_val)
     
+    def pop(self, pop=-1):
+        yield self.vals[-1]
+        del self.vals[-1]
+    
     
