@@ -45,7 +45,8 @@ class Vector:
     def dot(self, w):
         return sum([v * w for v, w in zip(self.vals, w.vals)])
 
-    
+    def sum_of_squares(self):
+        return self.dot(self.vals)
 a = Vector([1, 2, 3, 4])
 b = Vector([1, 2, 3, 4])
 print(a.dot(b))
