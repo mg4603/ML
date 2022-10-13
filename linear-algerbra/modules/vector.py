@@ -52,7 +52,9 @@ class Vector:
     def magnitude(self):
         return sqrt(self.sum_of_squares())
 
-        
-a = Vector([1, 2, 3, 4])
-b = Vector([1, 2, 3, 4])
-print(a.magnitude())
+    def squared_distance(self, w):
+        return Vector(self - w).sum_of_squares()
+    
+a = Vector([5])
+b = Vector([4])
+print(a.squared_distance(b))
