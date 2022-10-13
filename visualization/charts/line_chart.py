@@ -10,7 +10,7 @@ def line_chart(xvalues, yvalues, color='green', marker='o',
         xvalues, yvalues, 
         color=color, 
         marker=marker, 
-        linestyles=linestyle
+        linestyle=linestyle
     )
 
     if title:
@@ -24,3 +24,4 @@ def line_chart(xvalues, yvalues, color='green', marker='o',
 
     plt.show()
 
+line_chart(years, gdp, title='Nominal GDP', ylabel='Billions of %')
