@@ -30,7 +30,12 @@ class Vector:
     def vector_sum(self, vectors):
         result = vectors[0]
         return reduce(self.__add__, vectors)
+    
+    def __mul__(self, scalar):
+        return [scalar * val for val in self.vals]
 
+    __rmul__ = __mul__
+    
 a = Vector([1, 2, 3, 4])
 b = Vector([1, 2, 3, 4])
-print(a.vector_sum)
+print(3* a)
