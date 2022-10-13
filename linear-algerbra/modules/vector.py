@@ -35,7 +35,11 @@ class Vector:
         return [scalar * val for val in self.vals]
 
     __rmul__ = __mul__
-    
+
+    def summation(self, vector):
+        return sum(vector)
+
+
 a = Vector([1, 2, 3, 4])
 b = Vector([1, 2, 3, 4])
-print(3* a)
+print(a.vector_mean())
