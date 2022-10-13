@@ -10,4 +10,6 @@ class Vector:
         yield self.vals[-1]
         del self.vals[-1]
     
-    
+    def __add__(self, other_vector):
+        self.vals = [v + w  for v, w in zip(self.vals, other_vector.vals)]
+        return self.vals
