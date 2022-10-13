@@ -55,6 +55,9 @@ class Vector:
     def squared_distance(self, w):
         return Vector(self - w).sum_of_squares()
     
+    def distance(self, w):
+        return self.magnitude(self.squared_distance(w))
+        
 a = Vector([5])
 b = Vector([4])
 print(a.squared_distance(b))
