@@ -1,4 +1,5 @@
 from functools import reduce
+from math import sqrt
 
 class Vector:
     def __init__(self, vals):
@@ -46,7 +47,12 @@ class Vector:
         return sum([v * w for v, w in zip(self.vals, w.vals)])
 
     def sum_of_squares(self):
-        return self.dot(self.vals)
+        return self.dot(self)
+    
+    def magnitude(self):
+        return sqrt(self.sum_of_squares())
+
+        
 a = Vector([1, 2, 3, 4])
 b = Vector([1, 2, 3, 4])
-print(a.dot(b))
+print(a.magnitude())
