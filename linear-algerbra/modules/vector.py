@@ -1,3 +1,5 @@
+from functools import reduce
+
 class Vector:
     def __init__(self, vals):
         self.vals = [val for val in vals]
@@ -24,7 +26,11 @@ class Vector:
     def __sub__(self, other_vector):
         self.vals = [v - w for v, w in zip(self.vals, other_vector.vals)]
         return self.vals
+    
+    def vector_sum(self, vectors):
+        result = vectors[0]
+        return reduce(self.__add__, vectors)
 
 a = Vector([1, 2, 3, 4])
 b = Vector([1, 2, 3, 4])
-print(a-b)
+print(a.vector_sum)
