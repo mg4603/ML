@@ -44,7 +44,7 @@ class Vector:
         return sum(self.vals)
 
     def vector_mean(self):
-        return self.summation(self.__mul__(1/ len(self.vals)))
+        return sum(self.__mul__(1/ len(self.vals)))
     
     def dot(self, w):
         return sum([v * w for v, w in zip(self.vals, w.vals)])
