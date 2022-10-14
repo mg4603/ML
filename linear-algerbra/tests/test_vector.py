@@ -10,6 +10,7 @@ def test_isNum():
 
 def test_append():
     a = Vector()
-    assert a.len() is 0
+    assert len(a) is 0
     a.append(1)
-    assert a.len() is 1
+    assert len(a) is 1
+
