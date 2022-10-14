@@ -1,3 +1,5 @@
+from collections import Counter
+
 def is_collection(collection):
     try:
         len(collection)
@@ -41,3 +43,11 @@ def quantile(x, p):
             return sorted(x)[p_index]
     except ValueError:
         raise Exception('Requires a homogenous collection of numbers')
+
+def mode(x):
+    if not is_collection(x):
+        raise Exception('Mode can\'t be calculated w.r.t input')
+
+    counts = Counter(x)
+    max_count = max(counts.values())
+    return [val for val, count in counts.items() if count == max_count]
