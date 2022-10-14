@@ -13,6 +13,9 @@ class Vector:
         self.vals = [v - w for v, w in zip(self.vals, other_vector.vals)]
         return self.vals
 
+    def __len__(self):
+        return len(self.vals)
+
     def __mul__(self, scalar):
         return [scalar * val for val in self.vals]
 
@@ -56,7 +59,4 @@ class Vector:
     
     def distance(self, w):
         return self.magnitude(self.squared_distance(w))
-
-    def len(self):
-        return len(self.vals)
 
