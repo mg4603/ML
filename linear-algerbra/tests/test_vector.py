@@ -14,3 +14,9 @@ def test_append():
     a.append(1)
     assert len(a) is 1
 
+def test_pop():
+    a = Vector([1, 2, 3, 4])
+    assert a.pop() is 4
+    assert len(a) is 3
+    assert a.pop(1) is 2
+    assert len(a) is 2
