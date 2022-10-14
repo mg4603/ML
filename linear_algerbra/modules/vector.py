@@ -5,9 +5,9 @@ class Vector:
     def __init__(self, vals = []):
         self.vals = [val for val in vals]
     
-    def __add__(self, val2):
-        self.vals = [v + w  for v, w in zip(self.vals, val2.vals)]
-        return self.vals
+    def __add__(self, vec2):
+        a = [v + w  for v, w in zip(self.vals, vec2.vals)]
+        return a
 
     def __len__(self):
         return len(self.vals)
