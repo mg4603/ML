@@ -17,3 +17,9 @@ class Matrix:
         if row_num < 1 or row_num > self.num_rows:
             raise IndexError
         return self.Matrix[row_num-1]
+
+    def get_column(self, col_num):
+        if col_num < 1 or col_num > self.num_cols:
+            raise IndexError
+        return [Mat_i[col_num-1] for Mat_i in self.Matrix]
+    
