@@ -8,10 +8,6 @@ class Vector:
     def __add__(self, val2):
         self.vals = [v + w  for v, w in zip(self.vals, val2.vals)]
         return self.vals
-    
-    def __sub__(self, other_vector):
-        self.vals = [v - w for v, w in zip(self.vals, other_vector.vals)]
-        return self.vals
 
     def __len__(self):
         return len(self.vals)
@@ -20,6 +16,10 @@ class Vector:
         return [scalar * val for val in self.vals]
 
     __rmul__ = __mul__
+
+    def __sub__(self, other_vector):
+        self.vals = [v - w for v, w in zip(self.vals, other_vector.vals)]
+        return self.vals
 
     def isNum(self, num):
         try:
