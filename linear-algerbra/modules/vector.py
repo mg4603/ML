@@ -57,5 +57,6 @@ class Vector:
     def distance(self, w):
         return self.magnitude(self.squared_distance(w))
 
-    
+    def len(self):
+        return len(self.vals)
 
