@@ -32,9 +32,10 @@ class Vector:
         if new_val:
             self.vals.append(new_val)
     
-    def pop(self, pop=-1):
-        yield self.vals[-1]
-        del self.vals[-1]
+    def pop(self, pop_idx=-1):
+        result = self.vals[pop_idx]
+        del self.vals[pop_idx]
+        return result
     
     def vector_sum(self, vectors):
         return reduce(self.__add__, vectors)
