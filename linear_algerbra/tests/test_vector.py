@@ -49,3 +49,9 @@ def test_pop():
 def test_summation():
     a = Vector([1, 2, 3, 4, 5])
     assert a.summation() == 15
+
+def test_vector_mean():
+    a = Vector([1, 2, 3, 4, 5])
+    assert a.vector_mean() == 3
+
+
