@@ -7,6 +7,12 @@ def test_add():
     assert (vec1 + vec2) == [2, 4, 6, 8]
     assert (vec1 + vec3) == [2, 4, 6, 8]
 
+def test_len():
+    vec1 = Vector([1, 2, 3, 4, 5]) 
+    assert len(vec1) == 5
+    vec1.pop()
+    assert len(vec1) == 4
+    
 def test_sub():
     vec1 = Vector([1, 2, 3, 4])
     vec2 = Vector([1, 2, 3, 4])
