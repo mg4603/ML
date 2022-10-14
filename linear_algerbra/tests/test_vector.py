@@ -6,7 +6,7 @@ def test_add():
     vec3 = Vector([1, 2, 3, 4 , 5])
     assert (vec1 + vec2)  == [2, 4, 6, 8]
     assert (vec1 + vec3) == [2, 4, 6, 8]
-
+    
 def test_isNum():
     a = Vector()
     assert a.isNum(5)
