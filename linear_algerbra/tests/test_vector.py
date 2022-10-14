@@ -12,6 +12,11 @@ def test_len():
     assert len(vec1) == 5
     vec1.pop()
     assert len(vec1) == 4
+
+def test_mul():
+    vec1 = Vector([1, 2, 3, 4, 5])
+    assert vec1 * 3 == [3, 6, 9, 12, 15]
+    assert 3 * vec1 == [3, 6, 9, 12, 15]
     
 def test_sub():
     vec1 = Vector([1, 2, 3, 4])
