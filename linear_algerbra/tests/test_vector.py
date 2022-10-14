@@ -54,4 +54,6 @@ def test_vector_mean():
     a = Vector([1, 2, 3, 4, 5])
     assert a.vector_mean() == 3
 
-
+def test_dot():
+    vec1 = Vector([1, 2, 3, 4, 5])
+    assert vec1.dot(vec1) == 55
