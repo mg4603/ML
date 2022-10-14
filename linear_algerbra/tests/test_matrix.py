@@ -25,3 +25,13 @@ def test_get_row():
     with raises(IndexError):
         mat.get_row(5)
 
+
+def test_get_column():
+    mat = Matrix([[1, 2, 3, 4], [2, 4, 6, 8]])
+    assert mat.get_column(1) == [1, 2]
+    
+    with raises(IndexError):
+        mat.get_column(0)
+    
+    with raises(IndexError):
+        mat.get_column(5)
