@@ -40,8 +40,8 @@ class Vector:
     def vector_sum(self, vectors):
         return reduce(self.__add__, vectors)
 
-    def summation(self, vector):
-        return sum(vector)
+    def summation(self):
+        return sum(self.vals)
 
     def vector_mean(self):
         return self.summation(self.__mul__(1/ len(self.vals)))
