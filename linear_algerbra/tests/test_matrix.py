@@ -4,9 +4,9 @@ from pytest import raises
 def test_Matrix():
     mat = Matrix([[1, 2, 3, 4], [2, 4, 6, 8]])
     mat2 = Matrix()
-    assert mat.matrix[0][0] == 1
-    assert len(mat2.matrix) == 0
-    assert type(mat2.matrix) is type([])
+    assert mat.Matrix[0][0] == 1
+    assert len(mat2.Matrix) == 0
+    assert type(mat2.Matrix) is type([])
 
 def test_shape():
     mat = Matrix([[1, 2, 3, 4], [2, 4, 6, 8]])
@@ -24,3 +24,4 @@ def test_get_row():
         
     with raises(IndexError):
         mat.get_row(5)
+
