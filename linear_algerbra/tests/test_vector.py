@@ -70,3 +70,8 @@ def test_squared_distance():
     vec1 = Vector([1, 0])
     vec2 = Vector([2, 3])
     assert vec1.squared_distance(vec2) == 10
+
+def test_distance():
+    vec1 = Vector([1, 0])
+    vec2 = Vector([2, 3])
+    assert vec1.distance(vec2) == pow(10, 1/2)
