@@ -8,3 +8,5 @@ class Matrix:
         else:
             self.matrix = []
 
+    def shape(self):
+        return self.num_rows, self.num_cols
