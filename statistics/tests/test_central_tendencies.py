@@ -1,4 +1,4 @@
-from modules.central_tendencies import is_collection, mean, median, quantile
+from modules.central_tendencies import is_collection, mean, median, mode, quantile
 from pytest import raises
 
 def test_is_collection():
@@ -34,3 +34,10 @@ def test_quantile():
     
     with raises(Exception):
         quantile('a', 0.1)
+
+def test_mode():
+    assert mode([1, 2, 1, 5, 6]) == [1]
+    assert mode([1, 1, 2, 2, 4]) == [1, 2]
+    with raises(Exception):
+        mode(1)
+    
