@@ -7,3 +7,9 @@ def test_isNum():
     assert not a.isNum('a')
     assert not a.isNum('asdf')
     assert not a.isNum('')
+
+def test_append():
+    a = Vector()
+    assert a.len() is 0
+    a.append(1)
+    assert a.len() is 1
