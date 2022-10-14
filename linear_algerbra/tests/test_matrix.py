@@ -1,4 +1,4 @@
-from modules.matrices import Matrix
+from modules.matrices import Matrix, is_diagonal
 from pytest import raises
 
 def test_Matrix():
@@ -25,7 +25,6 @@ def test_get_row():
     with raises(IndexError):
         mat.get_row(5)
 
-
 def test_get_column():
     mat = Matrix([[1, 2, 3, 4], [2, 4, 6, 8]])
     assert mat.get_column(1) == [1, 2]
@@ -35,3 +34,15 @@ def test_get_column():
     
     with raises(IndexError):
         mat.get_column(5)
+
+def test_make_matrix():
+    I5 = Matrix()
+    I5.make_matrix(5, 5, is_diagonal)
+    I5_man = [
+        [1, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0],
+        [0, 0, 1, 0, 0],
+        [0, 0, 0, 1, 0],
+        [0, 0, 0, 0, 1],
+    ]
+    assert I5.Matrix == I5_man
