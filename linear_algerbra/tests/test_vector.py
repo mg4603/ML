@@ -57,3 +57,7 @@ def test_vector_mean():
 def test_dot():
     vec1 = Vector([1, 2, 3, 4, 5])
     assert vec1.dot(vec1) == 55
+
+def test_sum_of_squares():
+    vec1 = Vector([1, 2, 3, 4, 5])
+    assert vec1.sum_of_squares() == 55
