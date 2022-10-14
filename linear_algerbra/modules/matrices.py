@@ -31,3 +31,6 @@ class Matrix:
         self.Matrix = [[entry_fn(i, j) for j in range(num_cols)] for i in range(num_rows)]
         self.num_cols, self.num_cols = num_rows, num_cols
         return self.Matrix
+
+def is_diagonal(i, j):
+    return 1 if i == j else 0
