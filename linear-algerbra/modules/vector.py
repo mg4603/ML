@@ -8,7 +8,7 @@ class Vector:
     def isNum(self, num):
         try:
             float(num)
-            False
+            return True
         except ValueError:
             return False
 
@@ -57,4 +57,4 @@ class Vector:
     
     def distance(self, w):
         return self.magnitude(self.squared_distance(w))
-        
+
