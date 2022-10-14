@@ -12,3 +12,8 @@ class Matrix:
 
     def shape(self):
         return self.num_rows, self.num_cols
+
+    def get_row(self, row_num):
+        if row_num < 1 or row_num > self.num_rows:
+            raise IndexError
+        return self.matrix[row_num-1]
