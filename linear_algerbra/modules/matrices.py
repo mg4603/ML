@@ -23,3 +23,11 @@ class Matrix:
             raise IndexError
         return [Mat_i[col_num-1] for Mat_i in self.Matrix]
     
+    def make_matrix(self, num_rows, num_cols, entry_fn):
+        """
+        create a num_rows x num_cols matrix 
+        whose (i, j)th entry is entry_fn(i,j)
+        """
+        self.Matrix = [[entry_fn(i, j) for j in range(num_cols)] for i in range(num_rows)]
+        self.num_cols, self.num_cols = num_rows, num_cols
+        return self.Matrix
