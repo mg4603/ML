@@ -2,7 +2,7 @@ from functools import reduce
 from math import sqrt
 
 class Vector:
-    def __init__(self, vals):
+    def __init__(self, vals = []):
         self.vals = [val for val in vals]
 
     def isNum(self, num):
@@ -58,6 +58,3 @@ class Vector:
     def distance(self, w):
         return self.magnitude(self.squared_distance(w))
         
-a = Vector([5])
-b = Vector([4])
-print(a.squared_distance(b))
