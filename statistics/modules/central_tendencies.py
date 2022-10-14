@@ -17,7 +17,7 @@ def mean(x):
 
 def median(x):
     if not is_collection(x):
-        raise Exception("Mean doesn't make sense w.r.t input")
+        raise Exception("Median doesn't make sense w.r.t input")
 
     try:
         if all(isinstance(float(val), float) for val in x):
@@ -31,3 +31,13 @@ def median(x):
     except ValueError:
         raise Exception("Requires a homogenous collection of numbers") 
 
+def quantile(x, p):
+    if not is_collection(x):
+        raise Exception("Quantile can't be calculated w.r.t input")
+    
+    try:
+        if all(isinstance(float(val), float) for val in x):
+            p_index = int(len(x) * p)
+            return sorted(x)[p_index]
+    except ValueError:
+        raise Exception('Requires a homogenous collection of numbers')
