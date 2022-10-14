@@ -7,6 +7,8 @@ class Matrix:
             self.matrix = [[aij  for aij in ai if type(aij) is data_type] for ai in matrix[0] ]
         else:
             self.matrix = []
+            self.num_rows = 0
+            self.num_cols = 0
 
     def shape(self):
         return self.num_rows, self.num_cols
