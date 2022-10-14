@@ -10,3 +10,5 @@ def test_Matrix():
 def test_shape():
     mat = Matrix([[1, 2, 3, 4], [2, 4, 6, 8]])
     assert mat.shape() == (2, 4)
+    mat = Matrix()
+    assert mat.shape() == (0, 0)
