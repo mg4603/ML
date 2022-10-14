@@ -18,8 +18,8 @@ class Vector:
     __rmul__ = __mul__
 
     def __sub__(self, other_vector):
-        self.vals = [v - w for v, w in zip(self.vals, other_vector.vals)]
-        return self.vals
+        a = [v - w for v, w in zip(self.vals, other_vector.vals)]
+        return a
 
     def isNum(self, num):
         try:
