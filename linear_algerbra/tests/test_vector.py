@@ -65,3 +65,8 @@ def test_sum_of_squares():
 def test_magnitude():
     vec1 = Vector([1, 2, 3, 4, 5])
     assert vec1.magnitude() == pow(55, 1/2)
+
+def test_squared_distance():
+    vec1 = Vector([1, 0])
+    vec2 = Vector([2, 3])
+    assert vec1.squared_distance(vec2) == 10
