@@ -17,3 +17,9 @@ def test_de_mean():
         de_mean(1)
     
     assert de_mean([1, 2, 3, 4, 5]) == [-2, -1, 0, 1, 2]
+
+def test_sum_of_squares():
+    assert sum_of_squares([1, 2, 3, 4, 5]) == 55
+    with raises(Exception):
+        sum_of_squares(1)
+    
