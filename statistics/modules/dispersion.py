@@ -1,4 +1,5 @@
 from modules.central_tendencies import mean
+from math import sqrt
 
 def is_iterable(x):
     try:
@@ -32,3 +33,6 @@ def variance(x):
         return sum_of_squares(deviations) / (n - 1)
     else:
         raise Exception('Variance can\'t be calculated on given input')
+
+def standard_deviation(x):
+    return sqrt(variance(x))
