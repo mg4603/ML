@@ -22,3 +22,13 @@ def sum_of_squares(x):
         return sum([pow(val, 2) for val in x])
     else:
         raise Exception('Sum of squares can\'t be calculated on a non-iterable')
+
+def variance(x):
+    if is_iterable(x):
+        n = len(x)
+        if n == 1:
+            return 0
+        deviations = de_mean(x)
+        return sum_of_squares(deviations) / (n - 1)
+    else:
+        raise Exception('Variance can\'t be calculated on given input')
