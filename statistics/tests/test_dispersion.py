@@ -22,4 +22,8 @@ def test_sum_of_squares():
     assert sum_of_squares([1, 2, 3, 4, 5]) == 55
     with raises(Exception):
         sum_of_squares(1)
-    
+
+def test_variance():
+    with raises(Exception):
+        variance(1)
+    assert variance([1, 2, 3, 4, 5]) == 2.5
