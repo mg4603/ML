@@ -27,3 +27,8 @@ def test_variance():
     with raises(Exception):
         variance(1)
     assert variance([1, 2, 3, 4, 5]) == 2.5
+
+def test_standard_deviation():
+    with raises(Exception):
+        standard_deviation(1)
+    assert standard_deviation([1, 2, 3, 4, 5]) == sqrt(2.5)
