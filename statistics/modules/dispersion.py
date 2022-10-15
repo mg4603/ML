@@ -1,4 +1,4 @@
-from modules.central_tendencies import mean
+from modules.central_tendencies import mean, quantile
 from math import sqrt
 
 def is_iterable(x):
@@ -36,3 +36,6 @@ def variance(x):
 
 def standard_deviation(x):
     return sqrt(variance(x))
+
+def interquantile_range(x):
+    return quantile(x, 0.75) - quantile(x, 0.25)
