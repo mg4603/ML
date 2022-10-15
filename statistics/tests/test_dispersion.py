@@ -32,3 +32,6 @@ def test_standard_deviation():
     with raises(Exception):
         standard_deviation(1)
     assert standard_deviation([1, 2, 3, 4, 5]) == sqrt(2.5)
+
+def test_interquantile_range():
+    assert interquantile_range([1, 2, 3, 4]) == 2 
