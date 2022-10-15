@@ -16,3 +16,9 @@ def data_range(x):
 def de_mean(x):
     x_bar = mean(x)
     return [x_i - x_bar for x_i in x]
+
+def sum_of_squares(x):
+    if is_iterable(x):
+        return sum([pow(val, 2) for val in x])
+    else:
+        raise Exception('Sum of squares can\'t be calculated on a non-iterable')
